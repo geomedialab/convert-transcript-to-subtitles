@@ -127,8 +127,10 @@ def convert(filename):
                             print('timestamp found!')
                             j+=1
                             remaining_text = line[k+len(timestamp_format):]
-                            if remaining_text.strip() is not '':
-                                subtitles[j] = [timestamp, remaining_text.strip()]
+                            preceding_text = line[:k]
+                            text = preceding_text + remaining_text
+                            if text.strip() is not '':
+                                subtitles[j] = [timestamp, text.strip()]
                             else:
                                 subtitles[j] = [timestamp]
                             line_contains_timestamp = True
@@ -209,7 +211,7 @@ if __name__ == "__main__":
         b = str(sys.argv[-1])
         print_to_file(a, convert(a), b)
     else:
-        print("2 args required: input filename and output subtitle extension type. Example: 'python convert_custom.py text.txt .vtt'")
+        print("2 args required: input filename and output subtitle extension type. Example: 'python convert.py text.txt .vtt'")
 '''
 import sys
 
