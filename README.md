@@ -12,7 +12,9 @@ For example:
 If you have the following text:
 
 > 45:11 The champions came through the gates and ran upstairs.
+> 
 > 45:30 They screamed with joy
+> 
 > 45:35 [...]
 
 You would input *MM:SS* in order to produce a subtitle file as follows:
