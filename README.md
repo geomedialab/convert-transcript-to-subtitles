@@ -23,8 +23,8 @@ You would input *MM:SS* in order to produce a subtitle file as follows:
 00:45:11.000 --> 00:45:30.000
 The champions came through the gates and ran upstairs. 
 
-00:45:30.000 --> 00:45:35.088
-They screamed with joy
+00:45:30.000 --> 00:45:35.000
+They yelled with joy
 ```
 
 
