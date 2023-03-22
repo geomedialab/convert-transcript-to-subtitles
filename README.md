@@ -13,7 +13,7 @@ If you have the following input text:
 ```
 45:11 The champions came through the gates and ran upstairs.
 
-45:30 They screamed with joy
+45:30 They yelled with joy
 
 45:35 [...]
 ```
