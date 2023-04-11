@@ -185,8 +185,10 @@ def convert(filename):
     
 def print_to_file(filename: str, subtitles: dict, ext: str):
     print('Printing to file')
+    if ext == None:
+        ext = '.srt'
     with open(filename + "_new" + ext, 'w', encoding='UTF-8') as newfile:
-        if ext == '.srt':
+        if ext == ('.srt'):
             for k,v in subtitles.items():
                 newfile.write(str(k))
                 newfile.write('\n')
@@ -204,14 +206,18 @@ def print_to_file(filename: str, subtitles: dict, ext: str):
                 newfile.write('\n')
                 newfile.write('\n')
         elif ext == '.vtt':
+            print('vtt format not yet functioning.')
             pass
 if __name__ == "__main__":
     if len(sys.argv) == 3:
         a = str(sys.argv[-2])
         b = str(sys.argv[-1])
         print_to_file(a, convert(a), b)
+    elif len(sys.argv) == 2:
+        a = str(sys.argv[-1])
+        print_to_file(a, convert(a), None)
     else:
-        print("2 args required: input filename and output subtitle extension type. Example: 'python convert.py text.txt .vtt'")
+        print("input filename required. Example: 'python convert.py text.txt'")
 '''
 import sys
 
